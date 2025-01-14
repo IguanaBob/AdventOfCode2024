@@ -1,4 +1,5 @@
 ###############################################################################
+#
 # 2024 Advent of Code, Day 09, Part 2
 # Copyright © 2025 Jonathan Hull
 #
@@ -14,6 +15,16 @@
 #
 # You should have received a copy of the GNU General Affero Public License
 # along with this program. If not, see <https://www.gnu.org/licenses/>. 
+#
+###############################################################################
+#
+# Reflection:
+# Part 2 gave more of a challenge than part 1. The compact_map function took me
+# 2-3 rewrites until I got it working properly and fast. I'm sure there is a
+# more efficient method than manually searching earch position, but I wanted to
+# do this day purely based on existing memory rather than reaching out to
+# to documentation/search.
+#
 ###############################################################################
 
 import sys

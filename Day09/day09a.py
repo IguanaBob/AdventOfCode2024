@@ -1,4 +1,5 @@
 ###############################################################################
+#
 # 2024 Advent of Code, Day 09, Part 1
 # Copyright © 2025 Jonathan Hull
 #
@@ -14,6 +15,13 @@
 #
 # You should have received a copy of the GNU General Affero Public License
 # along with this program. If not, see <https://www.gnu.org/licenses/>. 
+#
+###############################################################################
+#
+# Reflection:
+# This part was not very difficult, but was interesting. It gave some good
+# practice on list manipulation.
+#
 ###############################################################################
 
 import sys
