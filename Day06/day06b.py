@@ -91,6 +91,7 @@ def print_map(start,end):
     current_row = 0
     print("\n" * 30)
     for row in rows:
+        # Add color coding to the map. Comment this to use monocolor set by your terminal.
         if(current_row > start and current_row < end):
             print("".join(row).replace("^","\033[92m^\033[0m").replace(">","\033[92m>\033[0m").replace("<","\033[92m<\033[0m").replace("V","\033[92mV\033[0m").replace("#","\033[91m#\033[0m"))
         current_row = current_row + 1
