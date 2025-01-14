@@ -96,7 +96,7 @@ def print_map(start,end):
         current_row = current_row + 1
     if(int(end) > int(len(rows) - 30)):
         print("\n" * (len(rows) - end))
-    time.sleep(.04)
+    time.sleep(.04)  # Change to adjust the speed of the animation if looping
 
 # # Returns the character stored at a particular position.
 # If ? is returned, it is assumed this is outside the boundries of the map.
