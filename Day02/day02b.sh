@@ -102,7 +102,7 @@ for (( i=1 ; $i <= ${filelength} ; i++ )); do
 			if [[ ${d} -eq 0 ]]; then
 				check_if_safe ${report[@]:1}
 			else
-				# This method of removing one element is ugly as hell and took way to long to get working.
+				# This method of removing one element is ugly as hell and took way too long to get working.
 				check_if_safe $( echo "${report[@]:0:${d}} ${report[@]:$(( $d + 1 ))}" )
 			fi
 			safe=$?
