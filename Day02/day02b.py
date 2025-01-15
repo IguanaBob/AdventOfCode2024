@@ -29,10 +29,8 @@
 #
 # My Reflection:
 # 130x faster than the Bash version due to reading the input from disk once.
-# 
 #
 ###############################################################################
-
 
 def check_report(rep):
     print("Checking report: " + str(rep))
