@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 ###############################################################################
 #
 # 2024 Advent of Code, Day 06, Part 1
@@ -18,7 +20,14 @@
 #
 ###############################################################################
 #
-# Reflection:
+# ChatGPT's summary:
+# The Historians travel back to 1518 to a lab with a guard patrolling the area.
+# The guard follows a strict protocol: if there's an obstacle in front, they
+# turn right; otherwise, they move forward. Your task is to predict the guard's
+# path and count how many distinct positions the guard will visit before leaving
+# the mapped area.
+#
+# My Reflection:
 # Part 1 was not particularly hard. Was good pracitce on matrices/nested lists.
 #
 ###############################################################################

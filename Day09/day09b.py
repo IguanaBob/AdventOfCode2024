@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 ###############################################################################
 #
 # 2024 Advent of Code, Day 09, Part 2
@@ -18,7 +20,16 @@
 #
 ###############################################################################
 #
-# Reflection:
+# ChatGPT's summary:
+# The amphipod revises his plan to compact the disk by moving entire files
+# instead of individual blocks. Each file is moved to the leftmost span of
+# free space large enough to fit it, starting with the file with the highest
+# ID number. If a file can't be moved due to insufficient space, it stays
+# in its current position. After compacting, the filesystem checksum is
+# calculated the same way by multiplying each block's position by its
+# file ID and summing the results.
+#
+# My Reflection:
 # Part 2 gave more of a challenge than part 1. The compact_map function took me
 # 2-3 rewrites until I got it working properly and fast. I'm sure there is a
 # more efficient method than manually searching earch position, but I wanted to

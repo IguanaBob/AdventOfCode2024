@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 ###############################################################################
 #
 # 2024 Advent of Code, Day 09, Part 1
@@ -18,7 +20,15 @@
 #
 ###############################################################################
 #
-# Reflection:
+# ChatGPT's summary:
+# The Historians help an amphipod compact files on his disk, which uses a
+# dense format with alternating digits representing file lengths and free space.
+# Your task is to move the files from the end of the disk into the leftmost
+# free space, step by step, until there are no gaps remaining. After compacting,
+# you need to calculate the checksum by multiplying each block's position with
+# the file ID number it contains and summing the results, excluding free space.
+#
+# My Reflection:
 # This part was not very difficult, but was interesting. It gave some good
 # practice on list manipulation.
 #

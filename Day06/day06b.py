@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 ###############################################################################
 #
 # 2024 Advent of Code, Day 06, Part 2
@@ -18,7 +20,13 @@
 #
 ###############################################################################
 #
-# Reflection:
+# ChatGPT's summary:
+# After analyzing the guard's patrol path, The Historians want to place a new
+# obstruction that will trap the guard in a loop, allowing them to safely search
+# the lab. Your goal is to determine how many different positions could be chosen
+# for this obstruction, avoiding the guard's starting position.
+#
+# My Reflection:
 # This gave a good challenge over part 1. I stored every guard step including
 # direction in a list to compare against for detecting looped paths.
 #
