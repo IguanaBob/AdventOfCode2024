@@ -34,7 +34,7 @@
 # the point that I was commenting and uncommenting temporary output so many
 # times that I altered my lazy level (up? down?) by using a debug boolean to
 # suppress the output. Given a re-write I probably would use a command line 
-# to control this rather than changing the variable in source.
+# argument to control this rather than changing the variable in source.
 #
 # I knew this had to have been solved already somewhere in a python library
 # that I hadn't learned yet, and I also wanted to see an AI solution, so after
