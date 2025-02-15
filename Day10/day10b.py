@@ -20,6 +20,11 @@
 ###############################################################################
 #
 # ChatGPT's summary:
+# A trailhead's rating is the number of distinct hiking trails that begin at
+# that position. A hiking trail follows an increasing path from height 0 to 9,
+# stepping only by +1 at each step. The goal is to find all trailheads on the
+# topographic map, count the number of distinct trails that start from each,
+# and sum these ratings to get the final total.
 #
 # My Reflection:
 # Easiest part-2 ever. I just uncommented the visited.append() lines so it
