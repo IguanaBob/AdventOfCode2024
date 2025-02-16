@@ -24,12 +24,19 @@
 #
 # My Reflection:
 # After reading description: Okay, so I change blinks to 75 and wait...
+#
 # During: ...for 4 hours (34 blinks in)... (cancels and changes to storing as
 # int instead of str) ...and wait...
-# 
 #
-# There may be a faster way, possibly iterating once only but moving backwards
-# after a change, so I may revisit later to try it for fun.
+# 46 minutes later: Canceled. Still too slow, but it used less memory.
+#
+# Rethink... Fork? Store values for lookup? Iterate once but repeat at each
+# stone then pop off?
+# Forking will give it a speedup, but the slowness is due to the exponential
+# growth so it may not be enough. Calculating once and storing the count in
+# a dictionary won't be too useful as it's unlikely we will see many repeats.
+# Iterating once will just change the order, likely won't help much. I am going
+# to have to do some testing.
 #
 ###############################################################################
 
