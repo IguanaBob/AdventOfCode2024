@@ -37,17 +37,29 @@
 # a dictionary won't be too useful as it's unlikely we will see many repeats.
 # Iterating once will just change the order, likely won't help much. I am going
 # to have to do some testing.
+# 
+# Trying forking: Got it working with multiprocessing. Still takes forever.
+# Going to let it run overnight.
 #
 ###############################################################################
 
 import sys
+import multiprocessing
+import os
 
 debug = False
 debug2 = True
 stones = []
 blinks = 75
+forks = 8
+blinks_before_forking = 13
+global stonecount
+stonecount = 0
 
 def readfile():
+    if 'stonecount' not in vars() and 'stonecount' not in globals():
+        global stonecount
+        stonecount = 0
     if (len(sys.argv) > 1):
         inputfile = sys.argv[1]
     else:
@@ -61,13 +73,11 @@ def readfile():
     while ( i < len(stones) ):
         stones[i] = int(stones[i])
         i += 1
+        stonecount += 1
     return stones
 
-#def printstones(stones):
-#    print(" ".join(stones))
-#    return
-
 def blink(stones):
+    global stonecount
     pos = 0
     while ( pos < len(stones) ):
         if debug: print( "Checking pos " + str(pos) + ": " + str(stones[pos]) )
@@ -90,15 +100,28 @@ def blink(stones):
             if debug: print("Default rule, multiplying by 2024: " + str(int(stones[pos]) * 2024))
             stones[pos] = stones[pos] * 2024
         pos += 1
-    return stones
+    return len(stones)
 
-stones = readfile()
-#printstones(stones)
-i = 0
-while ( i < blinks ):
-    blink(stones)
-#    if debug: printstones(stones)
-    i += 1
-    if debug2: print("Blinks: " + str(i))
-    if debug2: print("Stones: " + str(len(stones)))
-print("Stones after " + str(blinks) + " blinks: " + str(len(stones)))
+def blink_multi(stones,blinks):
+    i = 0
+    while ( i < blinks ):
+        blink(stones)
+        i += 1
+    return len(stones)
+
+if __name__ == '__main__':
+
+    stones = readfile()
+    k = 0
+    if (blinks_before_forking > blinks): blinks_before_forking = blinks
+    while k < blinks_before_forking:
+        blink(stones)
+        k += 1
+    stonecount = 0
+    print("Begining forking...")
+    with multiprocessing.Pool(processes=forks) as pool:
+       results = pool.starmap(blink_multi, [([sl],blinks-blinks_before_forking) for sl in stones])
+       #print("results: " + str(results))
+       stonecount = sum(results)
+
+    print("Stones after " + str(blinks) + " blinks: " + str(stonecount))
