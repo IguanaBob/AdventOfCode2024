@@ -40,6 +40,10 @@
 # 
 # Trying forking: Got it working with multiprocessing. Still takes forever.
 # Going to let it run overnight.
+# While that runs, I'm going to test store/lookup rainbow tables to test for
+# repetition that can be eliminated. That will be in day11b_rainbow.py
+#
+# See day11b_final.py for information on the final solution.
 #
 ###############################################################################
 
